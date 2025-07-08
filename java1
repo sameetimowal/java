@@ -1,0 +1,12 @@
+#Declare and initialize variables for your name, age, and favorite programming language. Print them in a formatted sentence.
+
+
+public class Main {
+    public static void main(String[] args) {
+        String name = "Sameeti";
+        int age = 20;
+        String favoriteLanguage = "Java";
+
+        System.out.println("My name is " + name + ", I am " + age + " years old, and my favorite programming language is " + favoriteLanguage + ".");
+    }
+}
