@@ -1,0 +1,32 @@
+#Take two numbers and print their sum, difference, product, and quotient.Take three subject marks as integers, calculate and print the average using floating-point division.
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        System.out.println("Sum: " + (a + b));
+        System.out.println("Difference: " + (a - b));
+        System.out.println("Product: " + (a * b));
+        if (b != 0)
+            System.out.println("Quotient: " + ((float) a / b));
+        else
+            System.out.println("Quotient: Cannot divide by zero");
+
+        System.out.print("Enter marks for subject 1: ");
+        int m1 = sc.nextInt();
+        System.out.print("Enter marks for subject 2: ");
+        int m2 = sc.nextInt();
+        System.out.print("Enter marks for subject 3: ");
+        int m3 = sc.nextInt();
+
+        float average = (m1 + m2 + m3) / 3.0f;
+        System.out.println("Average marks: " + average);
+    }
+}
