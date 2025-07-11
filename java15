@@ -1,0 +1,24 @@
+#Convert Celsius to Fahrenheit and print the temperature.Given principal, rate, and time, calculate the simple interest for a given amount deposited to bank.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter temperature in Celsius: ");
+        float celsius = sc.nextFloat();
+        float fahrenheit = (celsius * 9 / 5) + 32;
+        System.out.println("Temperature in Fahrenheit: " + fahrenheit);
+
+        System.out.print("Enter principal amount: ");
+        float principal = sc.nextFloat();
+
+        System.out.print("Enter rate of interest: ");
+        float rate = sc.nextFloat();
+
+        System.out.print("Enter time in years: ");
+        float time = sc.nextFloat();
+
+        float interest = (principal * rate * time) / 100;
+        System.out.println("Simple Interest: " + interest);
+    }
+}
