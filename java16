@@ -1,0 +1,27 @@
+#Write a Java program that takes a number and checks whether it is even or odd using operators.Take two numbers and print the greater one. If they are equal, print "Both are equal".
+  import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        if (num % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+
+        if (a > b)
+            System.out.println("Greater number: " + a);
+        else if (b > a)
+            System.out.println("Greater number: " + b);
+        else
+            System.out.println("Both are equal");
+    }
+}
