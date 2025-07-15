@@ -1,0 +1,36 @@
+#Create an enum Day with constants for all 7 days. Write a program that takes a day name as input and prints a custom message for that day.Demonstrate auto-boxing and unboxing using Integer and Double wrapper classes. Add two Integer objects and print the result.
+import java.util.*;
+enum Day {
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine().toUpperCase();
+
+        try {
+            Day day = Day.valueOf(input);
+            switch (day) {
+                case MONDAY -> System.out.println("Work starts");
+                case TUESDAY -> System.out.println("Keep going");
+                case WEDNESDAY -> System.out.println("Midweek");
+                case THURSDAY -> System.out.println("Almost done");
+                case FRIDAY -> System.out.println("Weekend coming");
+                case SATURDAY -> System.out.println("Enjoy!");
+                case SUNDAY -> System.out.println("Rest day");
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid day");
+        }
+
+        Integer a = 10, b = 20;
+        int sum = a + b;
+        System.out.println("Sum: " + sum);
+
+        Double d = 5.5;
+        double x = d;
+        System.out.println("Double: " + d);
+        System.out.println("Unboxed: " + x);
+    }
+}
