@@ -1,0 +1,51 @@
+#Create a Book class with a parameterized constructor. Create two objects using the constructor and display their data.Use encapsulation: create a Student class with private fields and public getter/setter methods. Demonstrate their usage in the main() method.
+class Book {
+    String title;
+    String author;
+
+    Book(String t, String a) {
+        title = t;
+        author = a;
+    }
+
+    void show() {
+        System.out.println(title + " by " + author);
+    }
+}
+
+class Student {
+    private String name;
+    private int age;
+
+    public void setName(String n) {
+        name = n;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(int a) {
+        age = a;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Book b1 = new Book("Java Basics", "James");
+        Book b2 = new Book("Python Intro", "Guido");
+        b1.show();
+        b2.show();
+
+        Student s = new Student();
+        s.setName("Anu");
+        s.setAge(20);
+
+        System.out.println("Student Name: " + s.getName());
+        System.out.println("Student Age: " + s.getAge());
+    }
+}
