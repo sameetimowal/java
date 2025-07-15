@@ -1,0 +1,33 @@
+#Create a Laptop class with brand, model, and price as fields. Instantiate two objects and display their details.Write a program to compare the price of two Laptop objects and print which one is more expensive.
+  class Laptop {
+    String brand;
+    String model;
+    double price;
+
+    Laptop(String b, String m, double p) {
+        brand = b;
+        model = m;
+        price = p;
+    }
+
+    void show() {
+        System.out.println(brand + " " + model + " - ₹" + price);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Laptop l1 = new Laptop("Dell", "XPS", 70000);
+        Laptop l2 = new Laptop("HP", "Envy", 65000);
+
+        l1.show();
+        l2.show();
+
+        if (l1.price > l2.price)
+            System.out.println("Dell XPS is more expensive.");
+        else if (l2.price > l1.price)
+            System.out.println("HP Envy is more expensive.");
+        else
+            System.out.println("Both are same price.");
+    }
+}
