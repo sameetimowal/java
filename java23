@@ -1,0 +1,59 @@
+#Create a Person class with name and age, and a derived Employee class with employee ID and salary. Create an Employeeobject and print all details.Create a Vehicle base class with a start() method. Inherit Car and Bike classes, each overriding start(). Call start()on both.
+class Person {
+    String name;
+    int age;
+
+    Person(String n, int a) {
+        name = n;
+        age = a;
+    }
+}
+
+class Employee extends Person {
+    int empId;
+    double salary;
+
+    Employee(String n, int a, int id, double s) {
+        super(n, a);
+        empId = id;
+        salary = s;
+    }
+
+    void showDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Employee ID: " + empId);
+        System.out.println("Salary: ₹" + salary);
+    }
+}
+
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle is starting");
+    }
+}
+
+class Car extends Vehicle {
+    void start() {
+        System.out.println("Car is starting");
+    }
+}
+
+class Bike extends Vehicle {
+    void start() {
+        System.out.println("Bike is starting");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e = new Employee("Ravi", 30, 101, 50000);
+        e.showDetails();
+
+        Car c = new Car();
+        Bike b = new Bike();
+
+        c.start();
+        b.start();
+    }
+}
