@@ -1,0 +1,20 @@
+#Create a class Outer with a nested class Inner. From the main() method, create an object of the Inner class and call a method from it.Make the Inner class private. Add a method in Outer that returns the result of calling a method from Inner.
+class Outer {
+
+    private class Inner {
+        public String innerMethod() {
+            return "Hello from Inner class!";
+        }
+    }
+
+    public String getInnerMessage() {
+        Inner inner = new Inner();
+        return inner.innerMethod();
+    }
+
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+        String message = outer.getInnerMessage();
+        System.out.println(message);
+    }
+}
